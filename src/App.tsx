@@ -1,9 +1,9 @@
-import { Button } from "./components/button";
+import { WellCome } from "./pages/wellcome";
 
 function App() {
   return (
     <>
-      <Button />
+      <WellCome />
     </>
   );
 }

@@ -1,0 +1,31 @@
+@scope (#WellCome-page) {
+    & {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+    }
+
+    .img-section {
+        margin: auto;
+        padding-top: 7rem;
+    }
+
+    .text-section {
+        padding: 100px 3rem 95px 3rem;
+
+        h1 {
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        p {
+            font-size: 17px;
+            text-align: center;
+        }
+    }
+
+    .action {
+        margin: auto;
+    }
+}

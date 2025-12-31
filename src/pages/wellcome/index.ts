@@ -1,0 +1,1 @@
+export { WellCome } from "./wellcome";

@@ -1,11 +1,20 @@
-import { Loader } from "src/loader";
+import type { PropsWithChildren } from "react";
+import "./button.css";
 
-type ButtonVariants = "PRIMARY" | "SECONDARY" | "DESTRUCTIVE";
+type ButtonVariant = "PRIMARY" | "SECONDARY" | "DESTRUCTIVE";
 
-export function Button() {
+interface ButtonProps {
+  variant: ButtonVariant;
+}
+
+export function Button({ variant, children }: PropsWithChildren<ButtonProps>) {
   return (
-    <button>
-      <Loader />
+    <button
+      type="button"
+      data-variant={variant.toLowerCase()}
+      className={variant.toLowerCase()}
+    >
+      {children}
     </button>
   );
 }
