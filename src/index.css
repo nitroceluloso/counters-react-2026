@@ -1,0 +1,14 @@
+:root {
+    --yellow: #fd9400;
+    --red: #fc3a2f;
+    --silver: #ececec;
+    --silver-darker: #7b7e83;
+    --gray: #888b90;
+}
+
+body {
+    --background: #f9f9f9;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+    background: var(--background);
+    margin: 0;
+}
