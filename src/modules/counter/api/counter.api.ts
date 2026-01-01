@@ -8,5 +8,6 @@ interface CounterResponse {
 }
 
 export async function getCounters(): Promise<CounterResponse[]> {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   return await http.get(COUNTER_PATHS.counters);
 }

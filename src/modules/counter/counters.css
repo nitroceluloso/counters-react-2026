@@ -15,6 +15,12 @@
     section.counters {
         flex: 1;
         padding: 1.5rem 10px 0 10px;
+
+        &:has(.loader) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     section.actions {
