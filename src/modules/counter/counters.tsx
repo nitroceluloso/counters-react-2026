@@ -1,6 +1,5 @@
-import { Button } from "src/components/button";
-import { InputText } from "src/components/input-text";
-// import { Loader } from "src/components/loader/loader";
+import { Button } from "@/commons/components/button";
+import { InputText } from "@/commons/components/input-text";
 
 import "./counters.css";
 

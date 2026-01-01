@@ -1,4 +1,4 @@
-import { Button } from "src/components/button";
+import { Button } from "@/commons/components/button";
 import "./wellcome.css";
 
 interface WellcomeProps {

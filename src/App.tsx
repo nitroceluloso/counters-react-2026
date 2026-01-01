@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { WellCome } from "./pages/wellcome";
-import { Counters } from "./pages/counter";
+import { Counters } from "@/counter/counters";
+import { WellCome } from "@/wellcome";
 
 function App() {
   const [showWellCome, setShowWellCome] = useState(true);
