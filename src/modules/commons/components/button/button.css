@@ -4,6 +4,10 @@
         outline: 0;
         padding: 8px 24px;
         border-radius: 8px;
+        background-color: transparent;
+
+        &:has(img:only-child) {
+        }
     }
 
     &[data-variant="primary"] {

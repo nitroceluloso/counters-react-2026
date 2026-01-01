@@ -1,0 +1,32 @@
+@scope (.counter-item) {
+    & {
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 7px;
+        margin-top: 7px;
+        padding: 1rem 0.75rem;
+
+        p {
+            word-break: break-all;
+        }
+
+        span {
+            font-weight: 600;
+
+            &[data-value="0"] {
+                color: var(--silver-darker);
+            }
+        }
+    }
+
+    &.selected {
+        background-color: rgba(255, 149, 0, 20%);
+    }
+
+    .counter-actions {
+        display: flex;
+        justify-items: center;
+        align-content: center;
+    }
+}

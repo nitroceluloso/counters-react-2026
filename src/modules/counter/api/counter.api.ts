@@ -1,13 +1,8 @@
 import http from "@/commons/http";
+import type { Counter } from "../types/counter";
 import { COUNTER_PATHS } from "./constants";
 
-interface CounterResponse {
-  id: number;
-  title: string;
-  counter: number;
-}
-
-export async function getCounters(): Promise<CounterResponse[]> {
+export async function getCounters(): Promise<Counter[]> {
   await new Promise((resolve) => setTimeout(resolve, 2000));
   return await http.get(COUNTER_PATHS.counters);
 }
