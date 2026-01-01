@@ -1,6 +1,6 @@
-import { Button } from "@/commons/components/button";
 import { InputText } from "@/commons/components/input-text";
 import { Loader } from "@/commons/components/loader";
+import { ButtonIcon } from "./components/button-icon/buttonIcon";
 import { CounterList } from "./components/counter-list/counterList";
 import { useCounterApi } from "./hooks/counterApi";
 
@@ -19,7 +19,7 @@ export function Counters() {
         {!isLoading && <CounterList list={counterList!} />}
       </section>
       <section className="actions">
-        <Button variant="PRIMARY">+</Button>
+        <ButtonIcon icon="plus_white" variant="PRIMARY" />
       </section>
     </div>
   );

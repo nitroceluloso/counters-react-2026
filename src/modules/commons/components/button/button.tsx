@@ -3,21 +3,24 @@ import "./button.css";
 
 type ButtonVariant = "PRIMARY" | "SECONDARY" | "DESTRUCTIVE";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant: ButtonVariant;
+  withShadow?: boolean;
 }
 
 export function Button({
   variant,
   children,
+  withShadow = false,
   ...props
 }: PropsWithChildren<ButtonProps>) {
   return (
     <button
       {...props}
       type="button"
-      data-variant={variant.toLowerCase()}
-      className={variant.toLowerCase()}
+      data-variant={variant}
+      className={"btn"}
+      data-shadow-15={withShadow}
     >
       {children}
     </button>
