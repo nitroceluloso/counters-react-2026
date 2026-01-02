@@ -1,0 +1,9 @@
+@scope (.no-counters) {
+    & {
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 1.25rem;
+    }
+}

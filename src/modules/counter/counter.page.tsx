@@ -2,9 +2,10 @@ import { InputText } from "@/commons/components/input-text";
 import { Loader } from "@/commons/components/loader";
 import { ButtonIcon } from "./components/button-icon/buttonIcon";
 import { CounterList } from "./components/counter-list/counterList";
+import { NoCounters } from "./components/no-counters/noCounters";
 import { useCounterApi } from "./hooks/counterApi";
 
-import "./counters.css";
+import "./counter.page.css";
 
 export function Counters() {
   const { data: counterList, isFetching: isLoading } = useCounterApi();
@@ -16,7 +17,10 @@ export function Counters() {
       </section>
       <section className="counters">
         {isLoading && <Loader />}
-        {!isLoading && <CounterList list={counterList!} />}
+        {!isLoading && counterList?.length === 0 && <NoCounters />}
+        {!isLoading && counterList?.length !== 0 && (
+          <CounterList list={counterList!} />
+        )}
       </section>
       <section className="actions">
         <ButtonIcon icon="plus_white" variant="PRIMARY" />

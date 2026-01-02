@@ -16,7 +16,15 @@
         flex: 1;
         padding: 1.5rem 10px 0 10px;
 
+        /* Can't move it to the childen component? */
         &:has(.loader) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Can't move it to the childen component? */
+        &:has(.no-counters) {
             display: flex;
             align-items: center;
             justify-content: center;

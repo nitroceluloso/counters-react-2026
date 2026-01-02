@@ -1,1 +1,1 @@
-export { Counters } from "./counters";
+export { Counters } from "./counter.page";
