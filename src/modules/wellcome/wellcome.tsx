@@ -19,7 +19,7 @@ export function WellCome({ goToNextPage }: WellcomeProps) {
         </p>
       </div>
       <div className="action">
-        <Button onClick={goToNextPage} variant="SECONDARY">
+        <Button onClick={goToNextPage} variant="PRIMARY">
           Get started
         </Button>
       </div>

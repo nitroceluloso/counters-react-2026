@@ -1,7 +1,7 @@
 import type { ButtonHTMLAttributes, PropsWithChildren } from "react";
 import "./button.css";
 
-type ButtonVariant = "PRIMARY" | "SECONDARY" | "DESTRUCTIVE";
+type ButtonVariant = "PRIMARY" | "SECONDARY" | "TERTIARY" | "DESTRUCTIVE";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant: ButtonVariant;
@@ -19,7 +19,7 @@ export function Button({
       {...props}
       type="button"
       data-variant={variant}
-      className={"btn"}
+      className="btn"
       data-shadow-15={withShadow}
     >
       {children}

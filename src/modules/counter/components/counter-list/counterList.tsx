@@ -7,7 +7,7 @@ interface CounterListProps {
 
 export function CounterList({ list }: CounterListProps) {
   return (
-    <ul>
+    <>
       {list.map((counter) => (
         <CounterItem
           key={counter.id}
@@ -15,6 +15,6 @@ export function CounterList({ list }: CounterListProps) {
           title={counter.title}
         />
       ))}
-    </ul>
+    </>
   );
 }
