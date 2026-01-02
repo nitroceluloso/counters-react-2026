@@ -26,8 +26,8 @@
 
     "baseUrl": ".",
     "paths": {
-      "src/*": ["./src/*"]
-    }
+      "@/*": ["./src/modules/*"],
+    },
   },
-  "include": ["src"]
+  "include": ["src"],
 }

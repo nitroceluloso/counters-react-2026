@@ -1,7 +1,11 @@
-import { Button } from "src/components/button";
+import { Button } from "@/commons/components/button";
 import "./wellcome.css";
 
-export function WellCome() {
+interface WellcomeProps {
+  goToNextPage: () => void;
+}
+
+export function WellCome({ goToNextPage }: WellcomeProps) {
   return (
     <div id="WellCome-page">
       <div className="img-section">
@@ -15,7 +19,9 @@ export function WellCome() {
         </p>
       </div>
       <div className="action">
-        <Button variant="SECONDARY">Get started</Button>
+        <Button onClick={goToNextPage} variant="PRIMARY">
+          Get started
+        </Button>
       </div>
     </div>
   );

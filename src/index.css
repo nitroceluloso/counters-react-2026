@@ -6,9 +6,41 @@
     --gray: #888b90;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
 body {
     --background: #f9f9f9;
     font-family: "Avenir Next", "Avenir", sans-serif;
     background: var(--background);
-    margin: 0;
+    max-width: 100vw;
+}
+
+[data-shadow-15="true"] {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 15%);
+}
+
+[data-shadow-10="true"] {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 10%);
+}
+
+[data-shadow-05="true"] {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 5%);
+}
+
+[data-spinning="true"] {
+    animation: spin 1s linear infinite; /* Shorthand animation property */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    } /* Start at 0 degrees */
+    100% {
+        transform: rotate(360deg);
+    } /* End at 360 degrees (one full turn) */
 }

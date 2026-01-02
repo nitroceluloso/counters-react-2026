@@ -1,0 +1,41 @@
+@scope (.counter-item) {
+    & {
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 7px;
+        margin-top: 7px;
+        padding: 1rem 0.75rem;
+        gap: 1.5rem;
+        overflow: none;
+
+        p {
+            word-break: break-all;
+            overflow-wrap: break-word;
+        }
+
+        span {
+            font-weight: 600;
+
+            &[data-value="0"] {
+                color: var(--silver-darker);
+            }
+        }
+    }
+
+    &.selected {
+        background-color: rgba(255, 149, 0, 20%);
+    }
+
+    .counter-actions {
+        display: flex;
+        gap: 10px;
+
+        button {
+            background: transparent;
+            display: flex;
+            align-items: center;
+            border: none;
+        }
+    }
+}

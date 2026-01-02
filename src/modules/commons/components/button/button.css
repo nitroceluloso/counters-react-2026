@@ -1,0 +1,24 @@
+@scope (button.btn) {
+    & {
+        background-color: transparent;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        outline: 0;
+        padding: 8px 24px;
+    }
+
+    &[data-variant="PRIMARY"] {
+        color: white;
+        background: var(--yellow);
+    }
+
+    &[data-variant="SECONDARY"] {
+        color: var(--yellow);
+        background: #fff;
+    }
+
+    &[data-variant="DESTRUCTIVE"] {
+        color: var(--red);
+        background: #fff;
+    }
+}

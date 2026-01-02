@@ -1,0 +1,32 @@
+@scope (.summary) {
+    & {
+        padding: 0 0.75rem;
+    }
+
+    span:first-child {
+        font-weight: 600;
+    }
+
+    span + span {
+        color: #888b90;
+    }
+
+    span + * {
+        margin-left: 7px;
+    }
+
+    span:last-child {
+        margin-left: 5px;
+    }
+
+    button {
+        vertical-align: bottom;
+        background-color: transparent;
+        border: 0;
+    }
+
+    button + span {
+        margin-left: 7px;
+        color: var(--yellow);
+    }
+}
