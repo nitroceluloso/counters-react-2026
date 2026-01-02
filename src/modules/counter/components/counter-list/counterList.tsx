@@ -15,6 +15,11 @@ export function CounterList({ list }: CounterListProps) {
           title={counter.title}
         />
       ))}
+      {list.length === 0 && (
+        <div className="empty-list">
+          <p>No results</p>
+        </div>
+      )}
     </>
   );
 }

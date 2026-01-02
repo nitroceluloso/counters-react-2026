@@ -1,0 +1,16 @@
+@scope (.filter) {
+    & {
+        display: flex;
+        gap: 0.75rem;
+    }
+
+    .cover {
+        --cover-height: 80px;
+        position: absolute;
+        top: var(--cover-height);
+        left: 0;
+        width: 100%;
+        height: calc(100% - var(--cover-height));
+        background-color: rgba(255, 255, 255, 80%);
+    }
+}

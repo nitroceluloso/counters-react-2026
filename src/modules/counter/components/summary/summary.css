@@ -1,6 +1,7 @@
 @scope (.summary) {
     & {
-        padding: 0 0.75rem;
+        padding: 0 1.5rem;
+        align-self: flex-start;
     }
 
     span:first-child {

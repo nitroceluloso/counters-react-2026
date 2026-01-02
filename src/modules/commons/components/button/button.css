@@ -17,6 +17,11 @@
         background: #fff;
     }
 
+    &[data-variant="TERTIARY"] {
+        background-color: #fbfbfb;
+        font-weight: 600;
+    }
+
     &[data-variant="DESTRUCTIVE"] {
         color: var(--red);
         background: #fff;
