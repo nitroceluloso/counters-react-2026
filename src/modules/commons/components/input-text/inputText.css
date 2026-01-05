@@ -1,11 +1,31 @@
-@scope (input[type="text"]) {
+@scope (.input-search) {
     & {
+        width: 100%;
+        position: relative;
+    }
+
+    input {
         border: 1px solid var(--silver);
         display: block;
-        padding: 1rem;
-        /*box-shadow: 0 2px 8px rgba(0, 0, 0, 05%);*/
+        padding: 1rem 1rem 1rem 2.5rem;
         border-radius: 8px;
         opacity: 0.5;
         width: 100%;
+    }
+
+    img {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    }
+
+    /*input {
+        border: 1px solid red;
+        padding-left: 2rem;
+        width: 100%;
+    }*/
+
+    [data-empty="true"] & {
+        opacity: 50%;
     }
 }

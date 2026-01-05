@@ -4,17 +4,15 @@
         flex-direction: column;
         min-height: 100vh;
         padding: 1rem 0 1rem 0;
-        /* @TODO Improve this?*/
-        /*min-height: calc(100vh - 12px);*/
     }
 
     section.search {
-        padding: 0 1rem 0 1rem;
+        padding: 0 1rem 1.5rem 1rem;
     }
 
     section.counters {
         flex: 1;
-        padding: 1.5rem 10px 0 10px;
+        padding: 0 10px 0 10px;
 
         /* Can't move it to the childen component? */
         &:has(.loader) {
@@ -25,6 +23,12 @@
 
         /* Can't move it to the childen component? */
         &:has(.no-counters) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &:has(.empty-list) {
             display: flex;
             align-items: center;
             justify-content: center;

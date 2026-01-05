@@ -3,7 +3,10 @@ import "./button.css";
 
 type ButtonVariant = "PRIMARY" | "SECONDARY" | "TERTIARY" | "DESTRUCTIVE";
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends Omit<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  "type"
+> {
   variant: ButtonVariant;
   withShadow?: boolean;
 }
