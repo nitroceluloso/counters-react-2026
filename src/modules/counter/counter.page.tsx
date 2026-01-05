@@ -16,14 +16,15 @@ export function Counters() {
     refetch,
     isRefetching,
   } = useCounterApi();
+
   const { counterFiltered, queryTitle, setQueryTitle } =
     useSearchCounter(counterList);
 
   const loadingFirstTime = isLoading && !isRefetching;
-  const counterQuantity = counterList?.length ?? 0;
+  const counterQuantity = counterFiltered?.length ?? 0;
   const showSummary = (counterFiltered?.length ?? 0) > 0;
   const counterListSum =
-    counterList?.reduce((prev, act) => prev + act.count, 0) ?? 0;
+    counterFiltered?.reduce((prev, act) => prev + act.count, 0) ?? 0;
 
   return (
     <div id="Counters" data-empty={counterQuantity === 0}>
