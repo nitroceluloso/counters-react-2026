@@ -1,0 +1,21 @@
+@scope (.create-counter-modal) {
+    input {
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 5%);
+        box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.05);
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        padding: 10px 12px;
+        width: 100%;
+    }
+
+    p {
+        color: var(--silver-darker);
+    }
+
+    span {
+        text-decoration: underline;
+        color: black;
+    }
+}

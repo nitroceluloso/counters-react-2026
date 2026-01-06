@@ -1,4 +1,4 @@
-import { useState, type KeyboardEvent } from "react";
+import { useRef, useState, type KeyboardEvent } from "react";
 import { Button } from "@/commons/components/button";
 import { InputText } from "@/commons/components/input-text";
 
@@ -10,6 +10,7 @@ interface FilterProps {
 }
 
 export function Filter({ onSearch, query }: FilterProps) {
+  // const inputRef = useRef<HTMLInputElement>(null);
   const [showButton, setShowButton] = useState(false);
   const showCover = showButton && query.length === 0;
 
@@ -29,6 +30,7 @@ export function Filter({ onSearch, query }: FilterProps) {
 
   return (
     <div className="filter">
+      {/* @TODO: Implements forwardRef to lose focus after press Escape.*/}
       <InputText
         placeholder="Search counters"
         onChange={onSearchHandler}

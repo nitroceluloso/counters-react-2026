@@ -8,6 +8,8 @@ import { useCounterApi } from "./hooks/counterApi";
 import { useSearchCounter } from "./hooks/searchCouter";
 
 import "./counter.page.css";
+import { useModal } from "@/commons/hooks/modal.hook";
+import { CreateCounterModal } from "./components/create-counter-modal";
 
 export function Counters() {
   const {
@@ -19,6 +21,8 @@ export function Counters() {
 
   const { counterFiltered, queryTitle, setQueryTitle } =
     useSearchCounter(counterList);
+
+  const { close, isOpen, open } = useModal();
 
   const loadingFirstTime = isLoading && !isRefetching;
   const counterQuantity = counterFiltered?.length ?? 0;
@@ -49,8 +53,10 @@ export function Counters() {
         )}
       </section>
       <section className="actions">
-        <ButtonIcon icon="plus_white" variant="PRIMARY" />
+        <ButtonIcon icon="plus_white" variant="PRIMARY" onClick={open} />
       </section>
+      {/*<ExampleModal close={close} isOpen={isOpen} />*/}
+      <CreateCounterModal isOpen={isOpen} close={close} />
     </div>
   );
 }

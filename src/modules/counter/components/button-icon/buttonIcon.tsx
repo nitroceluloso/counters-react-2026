@@ -5,10 +5,10 @@ interface ButtonIconProps extends ButtonProps {
   icon: "trashcan_red" | "plus_white" | "share";
 }
 
-export function ButtonIcon({ icon, variant }: ButtonIconProps) {
+export function ButtonIcon({ icon, variant, ...props }: ButtonIconProps) {
   const src = `/icons/${icon}.svg`;
   return (
-    <Button variant={variant}>
+    <Button {...props} variant={variant}>
       <img src={src} alt="" />
     </Button>
   );
