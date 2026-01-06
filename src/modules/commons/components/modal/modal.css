@@ -1,0 +1,47 @@
+@scope (.modal) {
+    #bg-cover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 70%;
+        top: 0;
+        left: 0;
+    }
+    /* @TODO: add transition/animation when show. */
+    dialog {
+        border-radius: 8px 8px 0 0;
+        border: 0;
+        height: calc(100% - 1rem);
+        position: absolute;
+        top: 1rem;
+        width: 100%;
+    }
+
+    .head {
+        align-items: center;
+        border-bottom: 3px solid #c4c4c4;
+        display: flex;
+        gap: 1rem;
+        padding: 1.35rem 1rem;
+
+        button {
+            border: 0;
+            background: transparent;
+            display: flex;
+        }
+
+        h2 {
+            font-weight: 600;
+            font-size: 22px;
+        }
+
+        h2:first-letter {
+            text-transform: capitalize;
+        }
+    }
+
+    .body {
+        padding: 1.75rem 1.12rem;
+    }
+}
