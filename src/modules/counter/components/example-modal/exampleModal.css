@@ -1,0 +1,20 @@
+@scope (.example-modal) {
+    p {
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        padding-bottom: 0.5rem;
+        font-weight: 400;
+    }
+
+    .row {
+        white-space: nowrap;
+        overflow-x: scroll;
+        margin-bottom: 30px;
+    }
+
+    .pill + .pill {
+        margin-left: 1rem;
+    }
+}
