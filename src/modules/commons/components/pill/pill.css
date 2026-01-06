@@ -1,0 +1,10 @@
+@scope (.pill) {
+    :scope {
+        display: inline-block;
+        --border-color: #dcdcdf;
+        padding: 0.5rem 1rem;
+        border-radius: 9999px;
+        background-color: var(--silver);
+        border: 1px solid var(--border-color);
+    }
+}
