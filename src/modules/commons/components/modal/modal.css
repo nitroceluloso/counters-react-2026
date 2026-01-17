@@ -16,6 +16,11 @@
         position: absolute;
         top: 1rem;
         width: 100%;
+
+        &:open {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     .head {
@@ -25,7 +30,7 @@
         gap: 1rem;
         padding: 1.35rem 1rem;
 
-        button {
+        button.close {
             border: 0;
             background: transparent;
             display: flex;
@@ -39,9 +44,16 @@
         h2:first-letter {
             text-transform: capitalize;
         }
+
+        div:last-child {
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
     }
 
     .body {
         padding: 1.75rem 1.12rem;
+        flex: 1;
     }
 }

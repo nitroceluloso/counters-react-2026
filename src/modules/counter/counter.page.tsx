@@ -1,15 +1,15 @@
 import { Loader } from "@/commons/components/loader";
+import { useModal } from "@/commons/hooks/modal.hook";
 import { ButtonIcon } from "./components/button-icon/buttonIcon";
 import { CounterList } from "./components/counter-list/counterList";
+import { CreateCounterModal } from "./components/create-counter-modal";
 import { Filter } from "./components/filter/filter";
 import { NoCounters } from "./components/no-counters/noCounters";
 import { Summary } from "./components/summary";
-import { useCounterApi } from "./hooks/counterApi";
+import { useCounterApi } from "./hooks/api-counter/counterApi";
 import { useSearchCounter } from "./hooks/searchCouter";
 
 import "./counter.page.css";
-import { useModal } from "@/commons/hooks/modal.hook";
-import { CreateCounterModal } from "./components/create-counter-modal";
 
 export function Counters() {
   const {

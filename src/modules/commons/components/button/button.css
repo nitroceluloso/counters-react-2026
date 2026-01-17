@@ -10,7 +10,15 @@
     &[data-variant="PRIMARY"] {
         color: white;
         background: var(--yellow);
+
+        &:disabled {
+            opacity: 50%;
+        }
     }
+
+    /*&[data-variant="PRIMARY"]:disabled {
+        opacity: 50%;
+    }*/
 
     &[data-variant="SECONDARY"] {
         color: var(--yellow);
