@@ -1,5 +1,5 @@
+import type { Counter } from "@/counter/types/counter";
 import { useState } from "react";
-import type { Counter } from "../types/counter";
 
 export function useSearchCounter(counterList: Counter[] | undefined) {
   const [queryTitle, setQueryTitle] = useState("");

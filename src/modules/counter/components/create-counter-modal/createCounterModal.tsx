@@ -52,21 +52,21 @@ export function CreateCounterModal({ isOpen, close }: CreateCounterModal) {
       close={closeHandler}
       option={option}
     >
-      {step === "input" ? (
+      {step === "input" && (
         <CreateCounter
           setFormInvalid={setFormInvalid}
           goToNextStep={() => setStep("suggestion")}
           suggestedName={suggestedName}
           close={closeHandler}
         />
-      ) : null}
+      )}
 
-      {step === "suggestion" ? (
+      {step === "suggestion" && (
         <CreateCounterSuggestion
           setSuggestedName={setSuggestedName}
           goToNextStep={() => setStep("input")}
         />
-      ) : null}
+      )}
     </Modal>
   );
 }

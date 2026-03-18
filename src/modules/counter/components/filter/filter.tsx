@@ -1,4 +1,4 @@
-import { useRef, useState, type KeyboardEvent } from "react";
+import { useState, type KeyboardEvent } from "react";
 import { Button } from "@/commons/components/button";
 import { InputText } from "@/commons/components/input-text";
 
@@ -30,7 +30,7 @@ export function Filter({ onSearch, query }: FilterProps) {
 
   return (
     <div className="filter">
-      {/* @TODO: Implements forwardRef to lose focus after press Escape.*/}
+      {/* TODO: Implements forwardRef to lose focus after press Escape.*/}
       <InputText
         placeholder="Search counters"
         onChange={onSearchHandler}
