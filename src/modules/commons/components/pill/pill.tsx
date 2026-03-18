@@ -2,12 +2,15 @@ import "./pill.css";
 
 interface PillProps {
   value: string;
+  onClick: (value: string) => void;
 }
 
-export function Pill({ value }: PillProps) {
+export function Pill({ value, onClick }: PillProps) {
+  const onClickHandler = () => onClick(value);
+
   return (
-    <div className="pill" data-shadow-10>
-      <span>{value}</span>
-    </div>
+    <button className="pill" data-shadow-10 onClick={onClickHandler}>
+      {value}
+    </button>
   );
 }
