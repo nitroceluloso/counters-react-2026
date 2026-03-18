@@ -1,0 +1,17 @@
+@scope (.create-counter-suggestion) {
+    .pill-section {
+        white-space: nowrap;
+        overflow-x: auto;
+        margin-bottom: 1.87rem;
+        gap: 1rem;
+    }
+
+    p {
+        margin-bottom: 1.87rem;
+    }
+
+    h4 {
+        text-transform: capitalize;
+        margin-bottom: 0.5rem;
+    }
+}

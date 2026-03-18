@@ -9,6 +9,9 @@ interface ModalProps {
   option?: ReactNode;
 }
 
+/**
+ * TODO: implement scape key to close the modal.
+ */
 export function Modal({
   children,
   close,

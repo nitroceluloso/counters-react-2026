@@ -11,7 +11,7 @@ export function useCounterApi() {
   });
 }
 
-export function invalidateCoutnerApi() {
+export function invalidateCounterApi() {
   queryClient.invalidateQueries({
     queryKey: COUNTER_API_KEYS.LIST,
     exact: true,

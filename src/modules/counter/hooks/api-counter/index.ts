@@ -1,5 +1,5 @@
 export {
   useCounterApi,
-  invalidateCoutnerApi,
+  invalidateCounterApi,
   useCreateCounterApi,
 } from "./counterApi";

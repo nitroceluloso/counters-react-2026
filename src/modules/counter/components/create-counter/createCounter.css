@@ -1,4 +1,4 @@
-/*@scope (.create-counter-modal) {
+@scope (.create-counter) {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -18,8 +18,8 @@
         color: var(--silver-darker);
     }
 
-    span {
-        text-decoration: underline;
+    a {
+        /*text-decoration: underline;*/
         color: black;
     }
 
@@ -29,4 +29,4 @@
         align-items: center;
         justify-content: center;
     }
-}*/
+}
