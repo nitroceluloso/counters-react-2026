@@ -28,7 +28,7 @@ export async function Get(
   }
 }
 
-export async function Post(path: string, payload: Record<string, string>) {
+export async function Post<R, P>(path: string, payload: P): Promise<R> {
   try {
     const req = await fetch(path, {
       method: "post",

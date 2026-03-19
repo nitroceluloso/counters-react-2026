@@ -11,7 +11,8 @@ export function CounterList({ list }: CounterListProps) {
       {list.map((counter) => (
         <CounterItem
           key={counter.id}
-          counter={counter.count}
+          id={counter.id}
+          count={counter.count}
           title={counter.title}
         />
       ))}
