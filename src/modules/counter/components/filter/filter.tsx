@@ -10,6 +10,7 @@ interface FilterProps {
 }
 
 export function Filter({ onSearch, query }: FilterProps) {
+  // const inputRef = useRef<HTMLInputElement>(null);
   const [showButton, setShowButton] = useState(false);
   const showCover = showButton && query.length === 0;
 
@@ -29,6 +30,7 @@ export function Filter({ onSearch, query }: FilterProps) {
 
   return (
     <div className="filter">
+      {/* TODO: Implements forwardRef to lose focus after press Escape.*/}
       <InputText
         placeholder="Search counters"
         onChange={onSearchHandler}

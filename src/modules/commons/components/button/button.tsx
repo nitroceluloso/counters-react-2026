@@ -3,27 +3,30 @@ import "./button.css";
 
 type ButtonVariant = "PRIMARY" | "SECONDARY" | "TERTIARY" | "DESTRUCTIVE";
 
-export interface ButtonProps extends Omit<
-  ButtonHTMLAttributes<HTMLButtonElement>,
-  "type"
-> {
+// Omit<
+//   ButtonHTMLAttributes<HTMLButtonElement>,
+//   "type"
+// >
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant: ButtonVariant;
   withShadow?: boolean;
 }
 
 export function Button({
-  variant,
   children,
+  type = "button",
+  variant,
   withShadow = false,
   ...props
 }: PropsWithChildren<ButtonProps>) {
   return (
     <button
-      {...props}
-      type="button"
+      type={type}
       data-variant={variant}
       className="btn"
       data-shadow-15={withShadow}
+      {...props}
     >
       {children}
     </button>

@@ -1,3 +1,4 @@
 export const COUNTER_PATHS = {
-  counters: "/mock.json",
+  LIST: "/api/counters",
+  CREATE: "/api/counters",
 } as const;
