@@ -22,6 +22,8 @@ export function invalidateCounterApi() {
   });
 }
 
+// TODO: All below function could be improved by implementing *optimistic updates*.
+
 export function useCreateCounterApi() {
   return useMutation({
     mutationFn: createCounter,

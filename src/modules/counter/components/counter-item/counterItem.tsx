@@ -5,8 +5,13 @@ import {
 } from "@/counter/hooks/api-counter/counterApi";
 import type { Counter } from "@/counter/types/counter";
 import "./counterItem.css";
+import { ModalError } from "@/commons/components/modal-error/modalError";
+import { useModal } from "@/commons/hooks/modal.hook";
+import { useState } from "react";
 
 export function CounterItem({ count, title, id }: Counter) {
+  const [errorCount, setErrorCout] = useState(0);
+  const { close, isOpen, open } = useModal();
   const { mutate: incrementCounter } = useIncrementCounterApi();
   const { mutate: decrementCounter } = useDecrementCounterApi();
 
@@ -18,6 +23,11 @@ export function CounterItem({ count, title, id }: Counter) {
       {
         onSuccess: () => {
           invalidateCounterApi();
+          if (isOpen) close();
+        },
+        onError: () => {
+          setErrorCout(count + 1);
+          open();
         },
       },
     );
@@ -31,6 +41,11 @@ export function CounterItem({ count, title, id }: Counter) {
       {
         onSuccess: () => {
           invalidateCounterApi();
+          if (isOpen) close();
+        },
+        onError: () => {
+          setErrorCout(count - 1);
+          open();
         },
       },
     );
@@ -57,6 +72,13 @@ export function CounterItem({ count, title, id }: Counter) {
           </button>
         </div>
       </div>
+      <ModalError
+        close={close}
+        isOpen={isOpen}
+        message="The Internet connection appears to be offline."
+        title={`Couldn’t update "${title}" to ${errorCount}`}
+        retry={incrementCounterHandler}
+      />
     </div>
   );
 }
