@@ -2,7 +2,7 @@
     .pill-section {
         white-space: nowrap;
         overflow-x: auto;
-        margin-bottom: 1.87rem;
+        padding-bottom: 1.87rem;
         gap: 1rem;
     }
 
