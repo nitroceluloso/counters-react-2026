@@ -5,8 +5,6 @@ import { useState } from "react";
 import { CreateCounter } from "@/counter/components/create-counter";
 import { CreateCounterSuggestion } from "@/counter/components/create-counter-suggestion";
 
-import "./createCounterModal.css";
-
 interface CreateCounterModal {
   isOpen: boolean;
   close: () => void;

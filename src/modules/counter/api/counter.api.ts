@@ -2,7 +2,9 @@ import http from "@/commons/http";
 import type { Counter } from "../types/counter";
 import { COUNTER_PATHS } from "./constants";
 
-async function hold(ms = 500) {
+const delay = import.meta.env.DEV ? 500 : 0;
+
+async function hold(ms = delay) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 

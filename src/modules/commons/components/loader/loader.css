@@ -1,0 +1,51 @@
+@scope (.loader) {
+    position: relative;
+    width: 114px;
+    height: 114px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+        animation: pulse 1s ease-in-out infinite;
+    }
+
+    .circle-inner {
+        width: 46px;
+        height: 46px;
+        background-color: #f89502;
+        animation-delay: 0s;
+    }
+
+    .circle-middle {
+        width: 70px;
+        height: 70px;
+        background-color: rgba(248, 149, 2, 0.1);
+        animation-delay: 0.3s;
+    }
+
+    .circle-outer {
+        width: 114px;
+        height: 114px;
+        background-color: rgba(248, 149, 2, 0.1);
+        animation-delay: 0.6s;
+    }
+
+    /* Animación de pulsación */
+    @keyframes pulse {
+        0% {
+            transform: scale(0.8);
+            opacity: 0.3;
+        }
+        50% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(0.8);
+            opacity: 0.3;
+        }
+    }
+}
