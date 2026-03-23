@@ -1,13 +1,14 @@
+import { ModalError } from "@/commons/components/modal-error/modalError";
+import { useModal } from "@/commons/hooks/modal.hook";
 import {
   invalidateCounterApi,
   useDecrementCounterApi,
   useIncrementCounterApi,
 } from "@/counter/hooks/api-counter/counterApi";
 import type { Counter } from "@/counter/types/counter";
-import "./counterItem.css";
-import { ModalError } from "@/commons/components/modal-error/modalError";
-import { useModal } from "@/commons/hooks/modal.hook";
 import { useState } from "react";
+
+import "./counterItem.css";
 
 export function CounterItem({ count, title, id }: Counter) {
   const [errorCount, setErrorCout] = useState(0);
