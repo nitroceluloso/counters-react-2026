@@ -10,13 +10,25 @@ import { useState } from "react";
 
 import "./counterItem.css";
 
-export function CounterItem({ count, title, id }: Counter) {
+interface CounterItem extends Counter {
+  isSelected: boolean;
+  onSelect: (id: number) => void;
+}
+
+export function CounterItem({
+  count,
+  title,
+  id,
+  isSelected = false,
+  onSelect,
+}: CounterItem) {
   const [errorCount, setErrorCout] = useState(0);
   const { close, isOpen, open } = useModal();
   const { mutate: incrementCounter } = useIncrementCounterApi();
   const { mutate: decrementCounter } = useDecrementCounterApi();
 
   const incrementCounterHandler = () => {
+    // ev.stopPropagation();
     incrementCounter(
       {
         id,
@@ -35,6 +47,7 @@ export function CounterItem({ count, title, id }: Counter) {
   };
 
   const decrementCounterHandler = () => {
+    // ev.stopPropagation();
     decrementCounter(
       {
         id,
@@ -53,8 +66,9 @@ export function CounterItem({ count, title, id }: Counter) {
   };
 
   return (
-    <div className="counter-item">
-      <div>
+    <div className="counter-item" data-is-selected={isSelected}>
+      {/* TODO: move this to parent div. */}
+      <div onClick={() => onSelect(id)}>
         <p>{title}</p>
       </div>
       <div>

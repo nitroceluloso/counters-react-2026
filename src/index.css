@@ -15,9 +15,9 @@
 html,
 body {
     font-family: "Avenir Next", "Avenir", sans-serif;
-    /*background: #fff;*/
     background: #f9f9f9;
     max-width: 100vw;
+    font-size: 16px;
 }
 
 [data-shadow-15="true"] {
@@ -33,14 +33,18 @@ body {
 }
 
 [data-spinning="true"] {
-    animation: spin 1s linear infinite; /* Shorthand animation property */
+    animation: spin 1s linear infinite;
+}
+
+.border-radius-std {
+    border-radius: 0.5rem;
 }
 
 @keyframes spin {
     0% {
         transform: rotate(0deg);
-    } /* Start at 0 degrees */
+    }
     100% {
         transform: rotate(360deg);
-    } /* End at 360 degrees (one full turn) */
+    }
 }

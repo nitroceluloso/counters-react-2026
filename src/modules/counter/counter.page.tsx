@@ -48,6 +48,14 @@ export function Counters() {
       </section>
       <section className="actions">
         <ButtonIcon icon="plus_white" variant="PRIMARY" onClick={open} />
+        {/*<div className="secondary">
+          <ButtonIcon
+            icon="trashcan_red"
+            variant="DESTRUCTIVE"
+            onClick={open}
+          />
+          <ButtonIcon icon="share" variant="SECONDARY" onClick={open} />
+        </div>*/}
       </section>
       <CreateCounterModal isOpen={isOpen} close={close} />
     </div>
